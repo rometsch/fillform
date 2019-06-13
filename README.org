@@ -1,17 +1,15 @@
 #+title: Automagically fill PDF forms
 #+author: Thomas Rometsch
 
-* Description
-
-This script uses *pymupdf* and *pdfrw* to fill a pdf form with information given in a textfile.
+A commandline utility to fill a pdf form with information given in a textfile.
 For recurring paperwork this can be a huge time saver, especially if the forms contain redundant information.
 
 * Getting started
 
+0) Install dependencies via =pip install --user pymupdf pdfrw=.
 1) Run =./fill.py --enumerate {your form}.pdf= to produce a copy of the form in which an integer id is entered in to all text fields and checkboxes of the form.
 2) Open ={your form}_numbered.pdf= for a reference of the available fields and their ids.
 3) Make text file in which you specify your data like follows:
-
 #+begin_example
 # you can indicate comments with a '#' character
 
@@ -21,5 +19,4 @@ For recurring paperwork this can be a huge time saver, especially if the forms c
 FirstField         1     some data
 SomeOtherField     42    2.8e7
 #+end_example
-
 4) finally run =./fill.py --input {your input textfile} {your form}.pdf= to produce the filled form with a default filename ={your form}_filled.pdf=. Adjust the filename with the =--outfile= option.
