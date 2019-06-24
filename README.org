@@ -6,7 +6,7 @@ For recurring paperwork this can be a huge time saver, especially if the forms c
 
 * Getting started
 
-0) Install dependencies via =pip install --user pymupdf pdfrw=.
+0) Install dependencies via =pip install --user -r requirements.txt=.
 1) Run =./fill.py --enumerate {your form}.pdf= to produce a copy of the form in which an integer id is entered in to all text fields and checkboxes of the form.
 2) Open ={your form}_numbered.pdf= for a reference of the available fields and their ids.
 3) Make text file in which you specify your data like in the example below.
